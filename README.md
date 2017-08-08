@@ -6,3 +6,5 @@
 4. Run `docker-compose up -d`
 
 Ghost will mount the `ghost/` directory where you can access all your data.
+
+NOTE: The DNS for your domain must be configured for Let Encrypt to generate your SSL certificate.  Caddy will fail to launch if your server is inaccessible.
