@@ -1,0 +1,7 @@
+your.domain.here {
+  gzip
+  tls you@email.com
+  proxy / server:2368 {
+    transparent
+  }
+}

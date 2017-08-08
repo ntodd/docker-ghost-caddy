@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  proxy:
+    restart: unless-stopped
+    build: proxy
+    volumes:
+      - ./proxy/Caddyfile:/etc/Caddyfile
+      - ./proxy/.caddy:/root/.caddy
+    ports:
+      - "80:80"
+      - "443:443"
+
+  ghost:
+    restart: unless-stopped
+    image: ghost:1.5.1-alpine
+    volumes:
+      - ./ghost:/var/lib/ghost/content/
+    ports:
+      - "2368"

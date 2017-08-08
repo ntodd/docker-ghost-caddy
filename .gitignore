@@ -1,0 +1,10 @@
+.DS_Store
+Caddyfile
+
+# Ignore letsencrypt files in .caddy
+proxy/.caddy/*
+!proxy/.caddy/.gitkeep
+
+# Ignore ghost content
+ghost/*
+!ghost/.gitkeep
