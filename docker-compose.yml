@@ -13,8 +13,11 @@ services:
 
   ghost:
     restart: unless-stopped
-    image: ghost:1.5.1-alpine
+    build:
+      context: ./ghost
+      args:
+        url: 'https://your.domain.here'
     volumes:
-      - ./ghost:/var/lib/ghost/content/
+      - ./ghost/content:/var/lib/ghost/content/
     ports:
       - "2368"

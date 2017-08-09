@@ -6,5 +6,5 @@ proxy/.caddy/*
 !proxy/.caddy/.gitkeep
 
 # Ignore ghost content
-ghost/*
-!ghost/.gitkeep
+ghost/content/*
+!ghost/content/.gitkeep
